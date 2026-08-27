@@ -1,201 +1,476 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F7F3EA">
 
-  <title>Discover Your Flower</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    name="theme-color"
+    content="#F7F3EA"
+  >
 
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Temukan bunga yang paling mencerminkan kecenderungan personality Anda melalui 8 pertanyaan singkat."
+  >
 
-  <link rel="stylesheet" href="style.css">
+  <title>Temukan Bungamu</title>
+
+
+  <!-- GOOGLE FONT -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- CSS -->
+
+  <link
+    rel="stylesheet"
+    href="style.css?v=4"
+  >
+
 </head>
+
 
 <body>
 
+
 <main id="app">
 
-  <!-- LANDING -->
-  <!-- LANDING -->
-<section id="landing" class="screen active">
 
-  <div class="brand">
-    TEMUKAN BUNGAMU
-  </div>
+  <!-- =========================
+       LANDING PAGE
+  ========================== -->
 
-  <div class="hero-flowers">
-    <span>🌻</span>
-    <span>🌷</span>
-    <span>🌹</span>
-    <span>🌼</span>
-    <span>🌸</span>
-    <span>🪻</span>
-  </div>
-
-  <h1>
-    Bunga apa yang paling<br>
-    mencerminkan dirimu?
-  </h1>
-
-  <p class="subtitle">
-    Jawab 8 pertanyaan singkat untuk menemukan
-    bunga yang paling menggambarkan kecenderungan
-    kepribadian Anda.
-  </p>
-
-  <button id="startBtn" class="primary-btn">
-    MULAI →
-  </button>
-
-  <small>
-    Sekitar 1 menit • Hasil bersifat interpretatif
-  </small>
-
-</section>
+  <section
+    id="landing"
+    class="screen active"
+  >
 
 
-  <!-- QUIZ -->
-  <section id="quiz" class="screen">
+    <div class="brand">
+      TEMUKAN BUNGAMU
+    </div>
 
-    <div class="quiz-header">
 
-      <span id="progressText">
-        01 / 08
-      </span>
+    <div class="hero-flowers">
 
-      <button id="backBtn" class="back-btn">
-        ←
-      </button>
+      <span>🌻</span>
+
+      <span>🌷</span>
+
+      <span>🌹</span>
+
+      <span>🌼</span>
+
+      <span>🌸</span>
+
+      <span>🪻</span>
 
     </div>
 
-    <div class="progress-track">
-      <div id="progressBar"></div>
+
+    <div class="landing-copy">
+
+      <p class="eyebrow">
+        PERSONALITY EXPERIENCE
+      </p>
+
+
+      <h1>
+
+        Bunga apa yang paling
+
+        <br>
+
+        mencerminkan dirimu?
+
+      </h1>
+
+
+      <p class="subtitle">
+
+        Jawab 8 pertanyaan singkat untuk menemukan
+        bunga yang paling menggambarkan kecenderungan
+        personality Anda.
+
+      </p>
+
     </div>
 
-    <div id="questionContainer">
 
-      <h2 id="questionText"></h2>
+    <button
+      id="startBtn"
+      class="primary-btn"
+      type="button"
+    >
 
-      <div id="answers"></div>
+      MULAI →
 
-    </div>
+    </button>
+
+
+    <p class="small-note">
+
+      Sekitar 1 menit
+
+      <span>•</span>
+
+      Hasil bersifat interpretatif
+
+    </p>
+
 
   </section>
 
 
-  <!-- ANALYZING -->
-<!-- ANALYZING -->
-<section id="analyzing" class="screen center-screen">
-
-  <div class="growing-flower">
-    🌱
-  </div>
-
-  <p class="eyebrow">
-    SEBENTAR LAGI
-  </p>
-
-  <h2>
-    Menemukan bungamu...
-  </h2>
-
-  <p>
-    Kami sedang merangkai jawaban Anda
-    menjadi profil bunga yang paling sesuai.
-  </p>
-
-  <div class="loader">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-</section>
 
 
-  <!-- RESULT -->
- <!-- RESULT -->
-<section id="result" class="screen">
+  <!-- =========================
+       QUIZ
+  ========================== -->
 
-  <p class="eyebrow">
-    PROFIL BUNGA ANDA
-  </p>
+  <section
+    id="quiz"
+    class="screen"
+  >
 
-  <div id="resultFlower" class="result-flower">
-    🌻
-  </div>
 
-  <h1 id="resultName">
-    SUNFLOWER
-  </h1>
+    <header class="quiz-header">
 
-  <h3 id="resultTitle">
-    SI OPTIMIS
-  </h3>
 
-  <p id="resultTraits" class="traits"></p>
+      <button
+        id="backBtn"
+        class="back-btn"
+        type="button"
+        aria-label="Kembali ke pertanyaan sebelumnya"
+      >
 
-  <p id="resultDescription" class="description"></p>
+        ←
 
-  <div class="personality-grid">
+      </button>
 
-    <div class="info-card">
-      <small>ENERGI ANDA</small>
-      <strong id="resultVibe"></strong>
+
+      <div class="quiz-counter">
+
+        <span id="progressText">
+          01 / 08
+        </span>
+
+      </div>
+
+
+      <div class="header-spacer"></div>
+
+
+    </header>
+
+
+
+    <div class="progress-track">
+
+      <div id="progressBar"></div>
+
     </div>
 
-    <div class="info-card">
-      <small>KEKUATAN ANDA</small>
-      <strong id="resultStrength"></strong>
+
+
+    <div
+      id="questionContainer"
+      class="question-container"
+    >
+
+
+      <p class="question-label">
+
+        PILIH YANG PALING MENDekATI DIRIMU
+
+      </p>
+
+
+      <h2 id="questionText">
+
+      </h2>
+
+
+      <div id="answers">
+
+      </div>
+
+
     </div>
 
-  </div>
 
-  <div class="result-note">
-    <strong>Bunga Anda telah ditemukan.</strong>
+  </section>
 
-    <p>
-      Tunjukkan halaman ini kepada staf
-      untuk mendapatkan bunga yang sesuai dengan hasil Anda.
+
+
+
+  <!-- =========================
+       ANALYZING
+  ========================== -->
+
+  <section
+    id="analyzing"
+    class="screen center-screen"
+  >
+
+
+    <div class="analyzing-decoration">
+
+      <span class="sparkle sparkle-one">
+        ✦
+      </span>
+
+      <span class="sparkle sparkle-two">
+        ✦
+      </span>
+
+
+      <div class="growing-flower">
+        🌱
+      </div>
+
+    </div>
+
+
+
+    <p class="eyebrow">
+
+      SEBENTAR LAGI
+
     </p>
-  </div>
-
-  <button id="restartBtn" class="secondary-btn">
-    ULANGI QUIZ
-  </button>
-
-</section>
 
 
- 
-<div class="result-note">
+    <h2 class="analyzing-title">
 
-  <strong>Inilah bunga yang mencerminkan dirimu.</strong>
+      Menemukan bungamu...
 
-  <p>
-    Setiap bunga memiliki karakter yang berbeda,
-    seperti halnya setiap pribadi memiliki caranya
-    sendiri untuk tumbuh dan memberi warna.
-  </p>
+    </h2>
 
-  <p>
-    Silakan tunjukkan halaman hasil ini kepada staf
-    untuk mendapatkan bunga yang sesuai dengan
-    personality Anda.
-  </p>
 
-</div>
+    <p class="analyzing-copy">
 
-</section>
+      Kami sedang merangkai jawaban Anda
+      menjadi profil bunga yang paling sesuai.
+
+    </p>
+
+
+    <div
+      class="loader"
+      aria-label="Memproses hasil"
+    >
+
+      <span></span>
+
+      <span></span>
+
+      <span></span>
+
+    </div>
+
+
+  </section>
+
+
+
+
+  <!-- =========================
+       RESULT
+  ========================== -->
+
+  <section
+    id="result"
+    class="screen result-screen"
+  >
+
+
+    <div class="result-top">
+
+
+      <p class="eyebrow">
+
+        PROFIL BUNGA ANDA
+
+      </p>
+
+
+      <div
+        id="resultFlower"
+        class="result-flower"
+      >
+
+        🌻
+
+      </div>
+
+
+      <h1 id="resultName">
+
+        SUNFLOWER
+
+      </h1>
+
+
+      <h3 id="resultTitle">
+
+        SI OPTIMIS
+
+      </h3>
+
+
+      <p
+        id="resultTraits"
+        class="traits"
+      >
+
+      </p>
+
+
+    </div>
+
+
+
+    <div class="result-content">
+
+
+      <div class="description-card">
+
+        <p
+          id="resultDescription"
+          class="description"
+        >
+
+        </p>
+
+      </div>
+
+
+
+      <div class="personality-grid">
+
+
+        <div class="info-card">
+
+          <small>
+
+            ENERGI ANDA
+
+          </small>
+
+          <strong id="resultVibe">
+
+          </strong>
+
+        </div>
+
+
+
+        <div class="info-card">
+
+          <small>
+
+            KEKUATAN ANDA
+
+          </small>
+
+          <strong id="resultStrength">
+
+          </strong>
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="result-note">
+
+
+        <div class="result-note-icon">
+
+          ✦
+
+        </div>
+
+
+        <div>
+
+          <strong>
+
+            Inilah bunga yang mencerminkan dirimu.
+
+          </strong>
+
+
+          <p>
+
+            Setiap bunga memiliki karakter yang berbeda,
+            seperti halnya setiap pribadi memiliki caranya
+            sendiri untuk tumbuh dan memberi warna.
+
+          </p>
+
+
+          <p class="staff-note">
+
+            Silakan tunjukkan halaman hasil ini kepada staf
+            untuk mendapatkan bunga yang sesuai dengan
+            personality Anda.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <p class="final-caption">
+
+        Simpan halaman ini sampai bunga Anda diterima.
+
+      </p>
+
+
+    </div>
+
+
+  </section>
+
 
 </main>
 
-<script src="script.js?v=3"></script>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js?v=4"></script>
+
 
 </body>
+
 </html>
