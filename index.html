@@ -20,40 +20,42 @@
 <main id="app">
 
   <!-- LANDING -->
-  <section id="landing" class="screen active">
+  <!-- LANDING -->
+<section id="landing" class="screen active">
 
-    <div class="brand">
-      DISCOVER YOUR FLOWER
-    </div>
+  <div class="brand">
+    TEMUKAN BUNGAMU
+  </div>
 
-    <div class="hero-flowers">
-      <span>🌻</span>
-      <span>🌷</span>
-      <span>🌹</span>
-      <span>🌼</span>
-      <span>🌸</span>
-      <span>🪻</span>
-    </div>
+  <div class="hero-flowers">
+    <span>🌻</span>
+    <span>🌷</span>
+    <span>🌹</span>
+    <span>🌼</span>
+    <span>🌸</span>
+    <span>🪻</span>
+  </div>
 
-    <h1>
-      Which flower<br>
-      matches your vibe?
-    </h1>
+  <h1>
+    Bunga apa yang paling<br>
+    mencerminkan dirimu?
+  </h1>
 
-    <p class="subtitle">
-      Answer 8 quick questions and discover
-      the flower that represents your personality.
-    </p>
+  <p class="subtitle">
+    Jawab 8 pertanyaan singkat untuk menemukan
+    bunga yang paling menggambarkan kecenderungan
+    kepribadian Anda.
+  </p>
 
-    <button id="startBtn" class="primary-btn">
-      START QUIZ →
-    </button>
+  <button id="startBtn" class="primary-btn">
+    MULAI →
+  </button>
 
-    <small>
-      Takes about 1 minute
-    </small>
+  <small>
+    Sekitar 1 menit • Hasil bersifat interpretatif
+  </small>
 
-  </section>
+</section>
 
 
   <!-- QUIZ -->
@@ -87,76 +89,87 @@
 
 
   <!-- ANALYZING -->
-  <section id="analyzing" class="screen center-screen">
+<!-- ANALYZING -->
+<section id="analyzing" class="screen center-screen">
 
-    <div class="growing-flower">
-      🌱
-    </div>
+  <div class="growing-flower">
+    🌱
+  </div>
 
-    <p class="eyebrow">
-      ALMOST THERE
-    </p>
+  <p class="eyebrow">
+    SEBENTAR LAGI
+  </p>
 
-    <h2>
-      Growing your flower...
-    </h2>
+  <h2>
+    Menemukan bungamu...
+  </h2>
 
-    <p>
-      We're finding the flower that
-      matches your vibe.
-    </p>
+  <p>
+    Kami sedang merangkai jawaban Anda
+    menjadi profil bunga yang paling sesuai.
+  </p>
 
-    <div class="loader">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-  </section>
+</section>
 
 
   <!-- RESULT -->
-  <section id="result" class="screen">
+ <!-- RESULT -->
+<section id="result" class="screen">
 
-    <p class="eyebrow">
-      YOU ARE...
+  <p class="eyebrow">
+    PROFIL BUNGA ANDA
+  </p>
+
+  <div id="resultFlower" class="result-flower">
+    🌻
+  </div>
+
+  <h1 id="resultName">
+    SUNFLOWER
+  </h1>
+
+  <h3 id="resultTitle">
+    SI OPTIMIS
+  </h3>
+
+  <p id="resultTraits" class="traits"></p>
+
+  <p id="resultDescription" class="description"></p>
+
+  <div class="personality-grid">
+
+    <div class="info-card">
+      <small>ENERGI ANDA</small>
+      <strong id="resultVibe"></strong>
+    </div>
+
+    <div class="info-card">
+      <small>KEKUATAN ANDA</small>
+      <strong id="resultStrength"></strong>
+    </div>
+
+  </div>
+
+  <div class="result-note">
+    <strong>Bunga Anda telah ditemukan.</strong>
+
+    <p>
+      Tunjukkan halaman ini kepada staf
+      untuk mendapatkan bunga yang sesuai dengan hasil Anda.
     </p>
+  </div>
 
-    <div id="resultFlower" class="result-flower">
-      🌻
-    </div>
+  <button id="restartBtn" class="secondary-btn">
+    ULANGI QUIZ
+  </button>
 
-    <h1 id="resultName">
-      SUNFLOWER
-    </h1>
-
-    <h3 id="resultTitle">
-      THE OPTIMIST
-    </h3>
-
-    <p id="resultTraits" class="traits"></p>
-
-    <p id="resultDescription" class="description"></p>
-
-    <div class="personality-grid">
-
-      <div class="info-card">
-        <small>YOUR VIBE</small>
-        <strong id="resultVibe"></strong>
-      </div>
-
-      <div class="info-card">
-        <small>YOUR STRENGTH</small>
-        <strong id="resultStrength"></strong>
-      </div>
-
-    </div>
-
-    <button id="claimBtn" class="primary-btn">
-      CLAIM MY FLOWER →
-    </button>
-
-  </section>
+</section>
 
 
   <!-- REDEEM -->
