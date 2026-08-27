@@ -757,6 +757,8 @@ document.documentElement
 
 showScreen("landing");
 
+});
+
 document
 .getElementById("restartBtn")
 .addEventListener(
