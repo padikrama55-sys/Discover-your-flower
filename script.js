@@ -102,75 +102,116 @@ answers: [
 const personalities = {
 
 SUN:{
-name:"SUNFLOWER",
-flower:"🌻",
-title:"THE OPTIMIST",
-traits:"Bright • Energetic • Positive",
-description:
-"You naturally bring warmth and positive energy into the people and places around you.",
-vibe:"☀️ Bright Energy",
-strength:"Making ordinary moments brighter.",
-color:"#FFC928"
+  name:"SUNFLOWER",
+  flower:"🌻",
+  title:"SI OPTIMIS",
+
+  traits:"Positif • Terbuka • Menguatkan",
+
+  description:
+  "Anda cenderung melihat kemungkinan baik dalam berbagai situasi. Kehadiran Anda sering membantu suasana terasa lebih ringan, tanpa perlu mengabaikan kenyataan yang ada.",
+
+  vibe:"Energi yang membangun",
+
+  strength:
+  "Melihat peluang dan membantu menjaga semangat.",
+
+  color:"#FFC928"
 },
+
 
 TUL:{
-name:"TULIP",
-flower:"🌷",
-title:"THE GENTLE",
-traits:"Caring • Thoughtful • Empathetic",
-description:
-"You notice the little things and naturally make people feel comfortable and understood.",
-vibe:"🤍 Warm Connection",
-strength:"Understanding people.",
-color:"#FF8FA3"
+  name:"TULIP",
+  flower:"🌷",
+  title:"SI HANGAT",
+
+  traits:"Peka • Tulus • Penuh perhatian",
+
+  description:
+  "Anda cenderung memperhatikan kebutuhan dan perasaan orang di sekitar. Anda nyaman membangun hubungan melalui perhatian kecil yang tulus dan konsisten.",
+
+  vibe:"Hangat dan bersahabat",
+
+  strength:
+  "Membuat orang merasa didengar dan dihargai.",
+
+  color:"#FF8FA3"
 },
+
 
 ROS:{
-name:"ROSE",
-flower:"🌹",
-title:"THE LEADER",
-traits:"Confident • Bold • Ambitious",
-description:
-"You are not afraid to take the first step. Challenges naturally bring out your drive.",
-vibe:"🔥 Bold Energy",
-strength:"Turning ideas into action.",
-color:"#E84A5F"
+  name:"ROSE",
+  flower:"🌹",
+  title:"SI PENUH TEKAD",
+
+  traits:"Bersemangat • Fokus • Berani melangkah",
+
+  description:
+  "Ketika sesuatu terasa penting bagi Anda, biasanya Anda memberikan energi dan komitmen yang cukup kuat. Anda nyaman mengubah niat menjadi langkah yang lebih nyata.",
+
+  vibe:"Terarah dan bersemangat",
+
+  strength:
+  "Menjaga fokus dan mendorong ide menjadi tindakan.",
+
+  color:"#E84A5F"
 },
+
 
 DAI:{
-name:"DAISY",
-flower:"🌼",
-title:"THE PLAYFUL",
-traits:"Fun • Spontaneous • Cheerful",
-description:
-"You bring spontaneity, laughter and memorable moments wherever you go.",
-vibe:"✨ Good Times",
-strength:"Making moments memorable.",
-color:"#F4D35E"
+  name:"DAISY",
+  flower:"🌼",
+  title:"SI CERIA",
+
+  traits:"Ringan • Spontan • Menyenangkan",
+
+  description:
+  "Anda cenderung mudah menemukan kesenangan dalam momen sederhana. Energi Anda sering membantu interaksi terasa lebih santai, ringan, dan akrab.",
+
+  vibe:"Ceria dan bersahabat",
+
+  strength:
+  "Mencairkan suasana dan menciptakan momen menyenangkan.",
+
+  color:"#F4D35E"
 },
+
 
 CHR:{
-name:"CHERRY BLOSSOM",
-flower:"🌸",
-title:"THE CREATOR",
-traits:"Creative • Curious • Imaginative",
-description:
-"You see possibilities where others may not and enjoy creating your own way of doing things.",
-vibe:"🎨 Creative Energy",
-strength:"Seeing things differently.",
-color:"#F5A6C8"
+  name:"CHERRY BLOSSOM",
+  flower:"🌸",
+  title:"SI ADAPTIF",
+
+  traits:"Terbuka • Fleksibel • Menghargai proses",
+
+  description:
+  "Anda cenderung cukup nyaman menghadapi perubahan dan melihatnya sebagai bagian dari perjalanan. Anda mampu menyesuaikan pendekatan tanpa harus kehilangan arah.",
+
+  vibe:"Luwes dan terus berkembang",
+
+  strength:
+  "Menyesuaikan diri dan menemukan cara baru ketika keadaan berubah.",
+
+  color:"#F5A6C8"
 },
 
+
 LAV:{
-name:"LAVENDER",
-flower:"🪻",
-title:"THE CALM",
-traits:"Peaceful • Balanced • Reflective",
-description:
-"You appreciate meaningful moments, quiet spaces and a life that feels balanced rather than rushed.",
-vibe:"🌿 Slow Energy",
-strength:"Finding calm in the chaos.",
-color:"#9B83D7"
+  name:"LAVENDER",
+  flower:"🪻",
+  title:"SI TENANG",
+
+  traits:"Reflektif • Seimbang • Penuh pertimbangan",
+
+  description:
+  "Anda cenderung memberi diri sendiri ruang untuk berpikir sebelum merespons. Sikap tersebut membantu Anda menjaga keseimbangan dan melihat situasi dengan lebih jernih.",
+
+  vibe:"Tenang dan seimbang",
+
+  strength:
+  "Menjaga kejernihan ketika situasi terasa ramai.",
+
+  color:"#9B83D7"
 }
 
 };
