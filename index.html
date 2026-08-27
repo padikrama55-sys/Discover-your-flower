@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F7F3EA">
+
+  <title>Discover Your Flower</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main id="app">
+
+  <!-- LANDING -->
+  <section id="landing" class="screen active">
+
+    <div class="brand">
+      DISCOVER YOUR FLOWER
+    </div>
+
+    <div class="hero-flowers">
+      <span>🌻</span>
+      <span>🌷</span>
+      <span>🌹</span>
+      <span>🌼</span>
+      <span>🌸</span>
+      <span>🪻</span>
+    </div>
+
+    <h1>
+      Which flower<br>
+      matches your vibe?
+    </h1>
+
+    <p class="subtitle">
+      Answer 8 quick questions and discover
+      the flower that represents your personality.
+    </p>
+
+    <button id="startBtn" class="primary-btn">
+      START QUIZ →
+    </button>
+
+    <small>
+      Takes about 1 minute
+    </small>
+
+  </section>
+
+
+  <!-- QUIZ -->
+  <section id="quiz" class="screen">
+
+    <div class="quiz-header">
+
+      <span id="progressText">
+        01 / 08
+      </span>
+
+      <button id="backBtn" class="back-btn">
+        ←
+      </button>
+
+    </div>
+
+    <div class="progress-track">
+      <div id="progressBar"></div>
+    </div>
+
+    <div id="questionContainer">
+
+      <h2 id="questionText"></h2>
+
+      <div id="answers"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ANALYZING -->
+  <section id="analyzing" class="screen center-screen">
+
+    <div class="growing-flower">
+      🌱
+    </div>
+
+    <p class="eyebrow">
+      ALMOST THERE
+    </p>
+
+    <h2>
+      Growing your flower...
+    </h2>
+
+    <p>
+      We're finding the flower that
+      matches your vibe.
+    </p>
+
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </section>
+
+
+  <!-- RESULT -->
+  <section id="result" class="screen">
+
+    <p class="eyebrow">
+      YOU ARE...
+    </p>
+
+    <div id="resultFlower" class="result-flower">
+      🌻
+    </div>
+
+    <h1 id="resultName">
+      SUNFLOWER
+    </h1>
+
+    <h3 id="resultTitle">
+      THE OPTIMIST
+    </h3>
+
+    <p id="resultTraits" class="traits"></p>
+
+    <p id="resultDescription" class="description"></p>
+
+    <div class="personality-grid">
+
+      <div class="info-card">
+        <small>YOUR VIBE</small>
+        <strong id="resultVibe"></strong>
+      </div>
+
+      <div class="info-card">
+        <small>YOUR STRENGTH</small>
+        <strong id="resultStrength"></strong>
+      </div>
+
+    </div>
+
+    <button id="claimBtn" class="primary-btn">
+      CLAIM MY FLOWER →
+    </button>
+
+  </section>
+
+
+  <!-- REDEEM -->
+  <section id="redeem" class="screen center-screen">
+
+    <p class="eyebrow">
+      YOUR FLOWER IS READY
+    </p>
+
+    <div id="redeemFlower" class="redeem-flower">
+      🌻
+    </div>
+
+    <h2 id="redeemName">
+      SUNFLOWER
+    </h2>
+
+    <div class="ticket">
+
+      <small>
+        REDEEM TICKET
+      </small>
+
+      <div id="redeemCode" class="redeem-code">
+        FLW-0000
+      </div>
+
+      <div class="ticket-line"></div>
+
+      <strong id="ticketFlower">
+        🌻 SUNFLOWER
+      </strong>
+
+      <span>
+        VALID • 1 REWARD
+      </span>
+
+    </div>
+
+    <p class="redeem-instruction">
+      Show this screen to our staff<br>
+      to collect your flower.
+    </p>
+
+    <button id="restartBtn" class="secondary-btn">
+      START AGAIN
+    </button>
+
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
