@@ -730,25 +730,6 @@ function showResult(key){
 }
 
 
-document
-.getElementById("claimBtn")
-...
-
-
-document
-.getElementById("claimBtn")
-.addEventListener(
-"click",
-()=> showScreen("redeem")
-);
-
-
-document
-.getElementById("restartBtn")
-.addEventListener(
-"click",
-()=>{
-
 document.documentElement
 .style.setProperty(
 "--accent",
@@ -759,11 +740,6 @@ showScreen("landing");
 
 });
 
-document
-.getElementById("restartBtn")
-.addEventListener(
-"click",
-()=>{
 
   document.documentElement
   .style.setProperty(
@@ -774,3 +750,53 @@ document
   showScreen("landing");
 
 });
+
+function showResult(key){
+
+  const p =
+  personalities[key];
+
+  document.documentElement
+  .style.setProperty(
+    "--accent",
+    p.color
+  );
+
+  document
+  .getElementById("resultFlower")
+  .textContent =
+  p.flower;
+
+  document
+  .getElementById("resultName")
+  .textContent =
+  p.name;
+
+  document
+  .getElementById("resultTitle")
+  .textContent =
+  p.title;
+
+  document
+  .getElementById("resultTraits")
+  .textContent =
+  p.traits;
+
+  document
+  .getElementById("resultDescription")
+  .textContent =
+  p.description;
+
+  document
+  .getElementById("resultVibe")
+  .textContent =
+  p.vibe;
+
+  document
+  .getElementById("resultStrength")
+  .textContent =
+  p.strength;
+
+  showScreen("result");
+
+}
