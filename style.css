@@ -639,3 +639,34 @@ small {
   }
 
 }
+.result-note {
+  margin-top: 4px;
+  margin-bottom: 22px;
+
+  padding: 18px;
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,.6);
+
+  border: 1px solid rgba(0,0,0,.12);
+
+  text-align: left;
+}
+
+.result-note strong {
+  display: block;
+
+  font-size: 13px;
+
+  margin-bottom: 7px;
+}
+
+.result-note p {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1.6;
+
+  opacity: .7;
+}
