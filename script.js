@@ -1,802 +1,1549 @@
+/* ==========================================
+   DISCOVER YOUR FLOWER
+   PERSONALITY ENGINE
+========================================== */
+
+
+/* ==========================================
+   QUESTIONS
+========================================== */
+
 const questions = [
 
-{
-  question:
-  "Saat memiliki waktu luang tanpa rencana, kegiatan mana yang paling menarik bagi Anda?",
+  {
 
-  answers: [
+    question:
+      "Saat memiliki waktu luang tanpa rencana, kegiatan mana yang paling menarik bagi Anda?",
 
-    [
-      "Pergi ke tempat atau suasana yang berbeda.",
-      {SUN:3, CHR:1}
-    ],
+    answers: [
 
-    [
-      "Menghabiskan waktu bersama orang yang dekat dengan saya.",
-      {TUL:3, LAV:1}
-    ],
+      [
+        "Pergi ke tempat atau suasana yang berbeda.",
+        {
+          SUN: 3,
+          CHR: 1
+        }
+      ],
 
-    [
-      "Mengerjakan sesuatu yang ingin saya capai.",
-      {ROS:3, SUN:1}
-    ],
+      [
+        "Menghabiskan waktu bersama orang yang dekat dengan saya.",
+        {
+          TUL: 3,
+          LAV: 1
+        }
+      ],
 
-    [
-      "Melakukan sesuatu secara spontan dan menyenangkan.",
-      {DAI:3, SUN:1}
-    ],
+      [
+        "Mengerjakan sesuatu yang ingin saya capai.",
+        {
+          ROS: 3,
+          SUN: 1
+        }
+      ],
 
-    [
-      "Mencoba pengalaman atau cara yang belum pernah saya lakukan.",
-      {CHR:3, ROS:1}
-    ],
+      [
+        "Melakukan sesuatu secara spontan dan menyenangkan.",
+        {
+          DAI: 3,
+          SUN: 1
+        }
+      ],
 
-    [
-      "Menikmati waktu yang lebih tenang untuk mengisi kembali energi.",
-      {LAV:3, TUL:1}
+      [
+        "Mencoba pengalaman atau cara yang belum pernah saya lakukan.",
+        {
+          CHR: 3,
+          ROS: 1
+        }
+      ],
+
+      [
+        "Menikmati waktu yang lebih tenang untuk mengisi kembali energi.",
+        {
+          LAV: 3,
+          TUL: 1
+        }
+      ]
+
     ]
 
-  ]
-},
+  },
 
 
-{
-  question:
-  "Ketika berada dalam sebuah kelompok, peran apa yang biasanya paling nyaman bagi Anda?",
 
-  answers: [
+  {
 
-    [
-      "Menjaga suasana tetap positif ketika keadaan mulai terasa berat.",
-      {SUN:3, DAI:1}
-    ],
+    question:
+      "Ketika berada dalam sebuah kelompok, peran apa yang biasanya paling nyaman bagi Anda?",
 
-    [
-      "Memastikan setiap orang memiliki kesempatan untuk didengar.",
-      {TUL:3, LAV:1}
-    ],
+    answers: [
 
-    [
-      "Membantu menentukan arah agar sesuatu dapat mulai berjalan.",
-      {ROS:3, SUN:1}
-    ],
+      [
+        "Menjaga suasana tetap positif ketika keadaan mulai terasa berat.",
+        {
+          SUN: 3,
+          DAI: 1
+        }
+      ],
 
-    [
-      "Membantu suasana terasa lebih santai dan menyenangkan.",
-      {DAI:3, TUL:1}
-    ],
+      [
+        "Memastikan setiap orang memiliki kesempatan untuk didengar.",
+        {
+          TUL: 3,
+          LAV: 1
+        }
+      ],
 
-    [
-      "Menyesuaikan rencana ketika situasinya berubah.",
-      {CHR:3, ROS:1}
-    ],
+      [
+        "Membantu menentukan arah agar sesuatu dapat mulai berjalan.",
+        {
+          ROS: 3,
+          SUN: 1
+        }
+      ],
 
-    [
-      "Mengamati situasi terlebih dahulu sebelum memberikan pendapat.",
-      {LAV:3, TUL:1}
+      [
+        "Membantu suasana terasa lebih santai dan menyenangkan.",
+        {
+          DAI: 3,
+          TUL: 1
+        }
+      ],
+
+      [
+        "Menyesuaikan rencana ketika situasinya berubah.",
+        {
+          CHR: 3,
+          ROS: 1
+        }
+      ],
+
+      [
+        "Mengamati situasi terlebih dahulu sebelum memberikan pendapat.",
+        {
+          LAV: 3,
+          TUL: 1
+        }
+      ]
+
     ]
 
-  ]
-},
+  },
 
 
-{
-  question:
-  "Ketika rencana tiba-tiba berubah, respons apa yang paling dekat dengan Anda?",
 
-  answers: [
+  {
 
-    [
-      "Mencoba melihat kemungkinan baik dari perubahan tersebut.",
-      {SUN:3, CHR:1}
-    ],
+    question:
+      "Ketika rencana tiba-tiba berubah, respons apa yang paling dekat dengan Anda?",
 
-    [
-      "Memikirkan terlebih dahulu bagaimana perubahan itu memengaruhi orang lain.",
-      {TUL:3, LAV:1}
-    ],
+    answers: [
 
-    [
-      "Segera menentukan langkah berikutnya.",
-      {ROS:3, SUN:1}
-    ],
+      [
+        "Mencoba melihat kemungkinan baik dari perubahan tersebut.",
+        {
+          SUN: 3,
+          CHR: 1
+        }
+      ],
 
-    [
-      "Menjalaninya dengan santai selama semuanya masih bisa dinikmati.",
-      {DAI:3, SUN:1}
-    ],
+      [
+        "Memikirkan terlebih dahulu bagaimana perubahan itu memengaruhi orang lain.",
+        {
+          TUL: 3,
+          LAV: 1
+        }
+      ],
 
-    [
-      "Mencari alternatif yang paling sesuai dengan kondisi baru.",
-      {CHR:3, LAV:1}
-    ],
+      [
+        "Segera menentukan langkah berikutnya.",
+        {
+          ROS: 3,
+          SUN: 1
+        }
+      ],
 
-    [
-      "Berhenti sejenak untuk memahami situasi sebelum bertindak.",
-      {LAV:3, ROS:1}
+      [
+        "Menjalaninya dengan santai selama semuanya masih bisa dinikmati.",
+        {
+          DAI: 3,
+          SUN: 1
+        }
+      ],
+
+      [
+        "Mencari alternatif yang paling sesuai dengan kondisi baru.",
+        {
+          CHR: 3,
+          LAV: 1
+        }
+      ],
+
+      [
+        "Berhenti sejenak untuk memahami situasi sebelum bertindak.",
+        {
+          LAV: 3,
+          ROS: 1
+        }
+      ]
+
     ]
 
-  ]
-},
+  },
 
 
-{
-  question:
-  "Ketika memasuki lingkungan yang belum terlalu Anda kenal, apa yang biasanya Anda lakukan?",
 
-  answers: [
+  {
 
-    [
-      "Mencoba melihatnya sebagai pengalaman baru yang menarik.",
-      {SUN:3, DAI:1}
-    ],
+    question:
+      "Ketika memasuki lingkungan yang belum terlalu Anda kenal, apa yang biasanya Anda lakukan?",
 
-    [
-      "Mulai mengenal satu atau dua orang secara lebih personal.",
-      {TUL:3, LAV:1}
-    ],
+    answers: [
 
-    [
-      "Mencari tahu apa yang perlu dilakukan agar saya memiliki arah.",
-      {ROS:3, SUN:1}
-    ],
+      [
+        "Mencoba melihatnya sebagai pengalaman baru yang menarik.",
+        {
+          SUN: 3,
+          DAI: 1
+        }
+      ],
 
-    [
-      "Mencoba mencairkan suasana agar terasa lebih nyaman.",
-      {DAI:3, TUL:1}
-    ],
+      [
+        "Mulai mengenal satu atau dua orang secara lebih personal.",
+        {
+          TUL: 3,
+          LAV: 1
+        }
+      ],
 
-    [
-      "Mengamati keadaan dan menyesuaikan diri secara bertahap.",
-      {CHR:3, LAV:1}
-    ],
+      [
+        "Mencari tahu apa yang perlu dilakukan agar saya memiliki arah.",
+        {
+          ROS: 3,
+          SUN: 1
+        }
+      ],
 
-    [
-      "Memberikan diri saya waktu untuk merasa nyaman terlebih dahulu.",
-      {LAV:3, TUL:1}
+      [
+        "Mencoba mencairkan suasana agar terasa lebih nyaman.",
+        {
+          DAI: 3,
+          TUL: 1
+        }
+      ],
+
+      [
+        "Mengamati keadaan dan menyesuaikan diri secara bertahap.",
+        {
+          CHR: 3,
+          LAV: 1
+        }
+      ],
+
+      [
+        "Memberikan diri saya waktu untuk merasa nyaman terlebih dahulu.",
+        {
+          LAV: 3,
+          TUL: 1
+        }
+      ]
+
     ]
 
-  ]
-},
+  },
 
 
-{
-  question:
-  "Ketika menerima masukan tentang sesuatu yang Anda kerjakan, apa yang biasanya Anda lakukan?",
 
-  answers: [
+  {
 
-    [
-      "Melihatnya sebagai kesempatan untuk membuat hasil menjadi lebih baik.",
-      {SUN:3, CHR:1}
-    ],
+    question:
+      "Ketika menerima masukan tentang sesuatu yang Anda kerjakan, apa yang biasanya Anda lakukan?",
 
-    [
-      "Memahami terlebih dahulu sudut pandang orang yang memberikan masukan.",
-      {TUL:3, LAV:1}
-    ],
+    answers: [
 
-    [
-      "Mengubah masukan yang relevan menjadi langkah yang bisa dilakukan.",
-      {ROS:3, SUN:1}
-    ],
+      [
+        "Melihatnya sebagai kesempatan untuk membuat hasil menjadi lebih baik.",
+        {
+          SUN: 3,
+          CHR: 1
+        }
+      ],
 
-    [
-      "Tidak terlalu lama memikirkannya dan tetap menikmati proses.",
-      {DAI:3, SUN:1}
-    ],
+      [
+        "Memahami terlebih dahulu sudut pandang orang yang memberikan masukan.",
+        {
+          TUL: 3,
+          LAV: 1
+        }
+      ],
 
-    [
-      "Mencoba pendekatan berbeda untuk melihat hasilnya.",
-      {CHR:3, ROS:1}
-    ],
+      [
+        "Mengubah masukan yang relevan menjadi langkah yang bisa dilakukan.",
+        {
+          ROS: 3,
+          SUN: 1
+        }
+      ],
 
-    [
-      "Memikirkannya terlebih dahulu sebelum menentukan respons.",
-      {LAV:3, TUL:1}
+      [
+        "Tidak terlalu lama memikirkannya dan tetap menikmati proses.",
+        {
+          DAI: 3,
+          SUN: 1
+        }
+      ],
+
+      [
+        "Mencoba pendekatan berbeda untuk melihat hasilnya.",
+        {
+          CHR: 3,
+          ROS: 1
+        }
+      ],
+
+      [
+        "Memikirkannya terlebih dahulu sebelum menentukan respons.",
+        {
+          LAV: 3,
+          TUL: 1
+        }
+      ]
+
     ]
 
-  ]
-},
+  },
 
 
-{
-  question:
-  "Aktivitas mana yang terasa paling menyenangkan bagi Anda?",
 
-  answers: [
+  {
 
-    [
-      "Menjelajah tempat atau pengalaman baru.",
-      {SUN:3, CHR:1}
-    ],
+    question:
+      "Aktivitas mana yang terasa paling menyenangkan bagi Anda?",
 
-    [
-      "Berbincang dengan orang yang saya pedulikan.",
-      {TUL:3, LAV:1}
-    ],
+    answers: [
 
-    [
-      "Menyelesaikan tantangan atau target pribadi.",
-      {ROS:3, SUN:1}
-    ],
+      [
+        "Menjelajah tempat atau pengalaman baru.",
+        {
+          SUN: 3,
+          CHR: 1
+        }
+      ],
 
-    [
-      "Bermain, bercanda, atau menikmati kegiatan bersama.",
-      {DAI:3, TUL:1}
-    ],
+      [
+        "Berbincang dengan orang yang saya pedulikan.",
+        {
+          TUL: 3,
+          LAV: 1
+        }
+      ],
 
-    [
-      "Mempelajari atau mencoba sesuatu yang berbeda.",
-      {CHR:3, SUN:1}
-    ],
+      [
+        "Menyelesaikan tantangan atau target pribadi.",
+        {
+          ROS: 3,
+          SUN: 1
+        }
+      ],
 
-    [
-      "Membaca, berjalan santai, atau menikmati suasana yang tenang.",
-      {LAV:3, TUL:1}
+      [
+        "Bermain, bercanda, atau menikmati kegiatan bersama.",
+        {
+          DAI: 3,
+          TUL: 1
+        }
+      ],
+
+      [
+        "Mempelajari atau mencoba sesuatu yang berbeda.",
+        {
+          CHR: 3,
+          SUN: 1
+        }
+      ],
+
+      [
+        "Membaca, berjalan santai, atau menikmati suasana yang tenang.",
+        {
+          LAV: 3,
+          TUL: 1
+        }
+      ]
+
     ]
 
-  ]
-},
+  },
 
 
-{
-  question:
-  "Ketika sebuah kelompok belum tahu harus mulai dari mana, apa yang paling mungkin Anda lakukan?",
 
-  answers: [
+  {
 
-    [
-      "Mengingatkan bahwa selalu ada kemungkinan untuk menemukan jalan.",
-      {SUN:3, DAI:1}
-    ],
+    question:
+      "Ketika sebuah kelompok belum tahu harus mulai dari mana, apa yang paling mungkin Anda lakukan?",
 
-    [
-      "Mendengarkan dulu apa yang dibutuhkan masing-masing orang.",
-      {TUL:3, LAV:1}
-    ],
+    answers: [
 
-    [
-      "Mengusulkan satu langkah awal agar semuanya mulai bergerak.",
-      {ROS:3, SUN:1}
-    ],
+      [
+        "Mengingatkan bahwa selalu ada kemungkinan untuk menemukan jalan.",
+        {
+          SUN: 3,
+          DAI: 1
+        }
+      ],
 
-    [
-      "Membuat suasana sedikit lebih ringan agar tidak terlalu tegang.",
-      {DAI:3, TUL:1}
-    ],
+      [
+        "Mendengarkan dulu apa yang dibutuhkan masing-masing orang.",
+        {
+          TUL: 3,
+          LAV: 1
+        }
+      ],
 
-    [
-      "Mencari cara alternatif yang mungkin belum terpikirkan.",
-      {CHR:3, ROS:1}
-    ],
+      [
+        "Mengusulkan satu langkah awal agar semuanya mulai bergerak.",
+        {
+          ROS: 3,
+          SUN: 1
+        }
+      ],
 
-    [
-      "Merapikan situasi terlebih dahulu sebelum menentukan langkah.",
-      {LAV:3, TUL:1}
+      [
+        "Membuat suasana sedikit lebih ringan agar tidak terlalu tegang.",
+        {
+          DAI: 3,
+          TUL: 1
+        }
+      ],
+
+      [
+        "Mencari cara alternatif yang mungkin belum terpikirkan.",
+        {
+          CHR: 3,
+          ROS: 1
+        }
+      ],
+
+      [
+        "Merapikan situasi terlebih dahulu sebelum menentukan langkah.",
+        {
+          LAV: 3,
+          TUL: 1
+        }
+      ]
+
     ]
 
-  ]
-},
+  },
 
 
-{
-  question:
-  "Pernyataan mana yang terasa paling dekat dengan cara Anda menjalani keseharian?",
 
-  answers: [
+  {
 
-    [
-      "Saya biasanya berusaha melihat kemungkinan baik dari sebuah situasi.",
-      {SUN:3, CHR:1}
-    ],
+    question:
+      "Pernyataan mana yang terasa paling dekat dengan cara Anda menjalani keseharian?",
 
-    [
-      "Saya menghargai hubungan yang membuat orang merasa nyaman menjadi dirinya sendiri.",
-      {TUL:3, LAV:1}
-    ],
+    answers: [
 
-    [
-      "Jika sesuatu penting bagi saya, saya berusaha membuatnya benar-benar berjalan.",
-      {ROS:3, SUN:1}
-    ],
+      [
+        "Saya biasanya berusaha melihat kemungkinan baik dari sebuah situasi.",
+        {
+          SUN: 3,
+          CHR: 1
+        }
+      ],
 
-    [
-      "Saya menikmati momen-momen sederhana yang membuat hari terasa lebih ringan.",
-      {DAI:3, TUL:1}
-    ],
+      [
+        "Saya menghargai hubungan yang membuat orang merasa nyaman menjadi dirinya sendiri.",
+        {
+          TUL: 3,
+          LAV: 1
+        }
+      ],
 
-    [
-      "Saya cukup nyaman mengubah cara ketika keadaan membutuhkan pendekatan baru.",
-      {CHR:3, ROS:1}
-    ],
+      [
+        "Jika sesuatu penting bagi saya, saya berusaha membuatnya benar-benar berjalan.",
+        {
+          ROS: 3,
+          SUN: 1
+        }
+      ],
 
-    [
-      "Saya lebih nyaman memberi diri saya waktu untuk berpikir sebelum merespons.",
-      {LAV:3, TUL:1}
+      [
+        "Saya menikmati momen sederhana yang membuat hari terasa lebih ringan.",
+        {
+          DAI: 3,
+          TUL: 1
+        }
+      ],
+
+      [
+        "Saya cukup nyaman mengubah cara ketika keadaan membutuhkan pendekatan baru.",
+        {
+          CHR: 3,
+          ROS: 1
+        }
+      ],
+
+      [
+        "Saya lebih nyaman memberi diri saya waktu untuk berpikir sebelum merespons.",
+        {
+          LAV: 3,
+          TUL: 1
+        }
+      ]
+
     ]
 
-  ]
-}
+  }
 
 ];
 
+
+
+
+/* ==========================================
+   PERSONALITIES
+========================================== */
 
 const personalities = {
 
-SUN:{
-  name:"SUNFLOWER",
-  flower:"🌻",
-  title:"SI OPTIMIS",
 
-  traits:"Positif • Terbuka • Menguatkan",
+  SUN: {
 
-  description:
-  "Anda cenderung melihat kemungkinan baik dalam berbagai situasi. Kehadiran Anda sering membantu suasana terasa lebih ringan, tanpa perlu mengabaikan kenyataan yang ada.",
+    name:
+      "SUNFLOWER",
 
-  vibe:"Energi yang membangun",
+    flower:
+      "🌻",
 
-  strength:
-  "Melihat peluang dan membantu menjaga semangat.",
+    title:
+      "SI OPTIMIS",
 
-  color:"#FFC928"
-},
+    traits:
+      "Positif • Terbuka • Menguatkan",
 
+    description:
+      "Anda cenderung melihat kemungkinan baik dalam berbagai situasi. Kehadiran Anda sering membantu suasana terasa lebih ringan dan memberi semangat kepada orang di sekitar, tanpa harus mengabaikan kenyataan yang sedang dihadapi.",
 
-TUL:{
-  name:"TULIP",
-  flower:"🌷",
-  title:"SI HANGAT",
+    vibe:
+      "Energi yang membangun",
 
-  traits:"Peka • Tulus • Penuh perhatian",
+    strength:
+      "Melihat peluang dan membantu menjaga semangat.",
 
-  description:
-  "Anda cenderung memperhatikan kebutuhan dan perasaan orang di sekitar. Anda nyaman membangun hubungan melalui perhatian kecil yang tulus dan konsisten.",
+    color:
+      "#FFC928"
 
-  vibe:"Hangat dan bersahabat",
-
-  strength:
-  "Membuat orang merasa didengar dan dihargai.",
-
-  color:"#FF8FA3"
-},
+  },
 
 
-ROS:{
-  name:"ROSE",
-  flower:"🌹",
-  title:"SI PENUH TEKAD",
 
-  traits:"Bersemangat • Fokus • Berani melangkah",
+  TUL: {
 
-  description:
-  "Ketika sesuatu terasa penting bagi Anda, biasanya Anda memberikan energi dan komitmen yang cukup kuat. Anda nyaman mengubah niat menjadi langkah yang lebih nyata.",
+    name:
+      "TULIP",
 
-  vibe:"Terarah dan bersemangat",
+    flower:
+      "🌷",
 
-  strength:
-  "Menjaga fokus dan mendorong ide menjadi tindakan.",
+    title:
+      "SI HANGAT",
 
-  color:"#E84A5F"
-},
+    traits:
+      "Peka • Tulus • Penuh perhatian",
 
+    description:
+      "Anda cenderung memperhatikan kebutuhan dan perasaan orang di sekitar. Anda nyaman membangun hubungan melalui perhatian kecil yang tulus, konsisten, dan membuat orang lain merasa diterima.",
 
-DAI:{
-  name:"DAISY",
-  flower:"🌼",
-  title:"SI CERIA",
+    vibe:
+      "Hangat dan bersahabat",
 
-  traits:"Ringan • Spontan • Menyenangkan",
+    strength:
+      "Membuat orang merasa didengar dan dihargai.",
 
-  description:
-  "Anda cenderung mudah menemukan kesenangan dalam momen sederhana. Energi Anda sering membantu interaksi terasa lebih santai, ringan, dan akrab.",
+    color:
+      "#FF8FA3"
 
-  vibe:"Ceria dan bersahabat",
-
-  strength:
-  "Mencairkan suasana dan menciptakan momen menyenangkan.",
-
-  color:"#F4D35E"
-},
+  },
 
 
-CHR:{
-  name:"CHERRY BLOSSOM",
-  flower:"🌸",
-  title:"SI ADAPTIF",
 
-  traits:"Terbuka • Fleksibel • Menghargai proses",
+  ROS: {
 
-  description:
-  "Anda cenderung cukup nyaman menghadapi perubahan dan melihatnya sebagai bagian dari perjalanan. Anda mampu menyesuaikan pendekatan tanpa harus kehilangan arah.",
+    name:
+      "ROSE",
 
-  vibe:"Luwes dan terus berkembang",
+    flower:
+      "🌹",
 
-  strength:
-  "Menyesuaikan diri dan menemukan cara baru ketika keadaan berubah.",
+    title:
+      "SI PENUH TEKAD",
 
-  color:"#F5A6C8"
-},
+    traits:
+      "Bersemangat • Fokus • Berani melangkah",
+
+    description:
+      "Ketika sesuatu terasa penting bagi Anda, biasanya Anda memberikan energi dan komitmen yang cukup kuat. Anda cenderung nyaman mengambil langkah nyata dan menjaga arah sampai tujuan mulai terlihat.",
+
+    vibe:
+      "Terarah dan bersemangat",
+
+    strength:
+      "Menjaga fokus dan mendorong ide menjadi tindakan.",
+
+    color:
+      "#E84A5F"
+
+  },
 
 
-LAV:{
-  name:"LAVENDER",
-  flower:"🪻",
-  title:"SI TENANG",
 
-  traits:"Reflektif • Seimbang • Penuh pertimbangan",
+  DAI: {
 
-  description:
-  "Anda cenderung memberi diri sendiri ruang untuk berpikir sebelum merespons. Sikap tersebut membantu Anda menjaga keseimbangan dan melihat situasi dengan lebih jernih.",
+    name:
+      "DAISY",
 
-  vibe:"Tenang dan seimbang",
+    flower:
+      "🌼",
 
-  strength:
-  "Menjaga kejernihan ketika situasi terasa ramai.",
+    title:
+      "SI CERIA",
 
-  color:"#9B83D7"
-}
+    traits:
+      "Ringan • Spontan • Menyenangkan",
+
+    description:
+      "Anda cenderung mudah menemukan kesenangan dalam momen sederhana. Energi Anda sering membantu interaksi terasa lebih santai, ringan, dan akrab tanpa harus memaksakan suasana.",
+
+    vibe:
+      "Ceria dan bersahabat",
+
+    strength:
+      "Mencairkan suasana dan menciptakan momen menyenangkan.",
+
+    color:
+      "#F4D35E"
+
+  },
+
+
+
+  CHR: {
+
+    name:
+      "CHERRY BLOSSOM",
+
+    flower:
+      "🌸",
+
+    title:
+      "SI ADAPTIF",
+
+    traits:
+      "Terbuka • Fleksibel • Menghargai proses",
+
+    description:
+      "Anda cenderung cukup nyaman menghadapi perubahan dan melihatnya sebagai bagian dari perjalanan. Anda mampu menyesuaikan pendekatan ketika keadaan berubah tanpa harus kehilangan arah yang ingin dituju.",
+
+    vibe:
+      "Luwes dan terus berkembang",
+
+    strength:
+      "Menyesuaikan diri dan menemukan cara baru ketika keadaan berubah.",
+
+    color:
+      "#F5A6C8"
+
+  },
+
+
+
+  LAV: {
+
+    name:
+      "LAVENDER",
+
+    flower:
+      "🪻",
+
+    title:
+      "SI TENANG",
+
+    traits:
+      "Reflektif • Seimbang • Penuh pertimbangan",
+
+    description:
+      "Anda cenderung memberi diri sendiri ruang untuk berpikir sebelum merespons. Sikap tersebut membantu Anda menjaga keseimbangan, memahami keadaan dengan lebih jernih, dan tidak terburu-buru mengambil keputusan.",
+
+    vibe:
+      "Tenang dan seimbang",
+
+    strength:
+      "Menjaga kejernihan ketika situasi terasa ramai.",
+
+    color:
+      "#9B83D7"
+
+  }
 
 };
 
 
-let currentQuestion = 0;
+
+
+/* ==========================================
+   APP STATE
+========================================== */
+
+let currentQuestion =
+  0;
+
 
 let scores = {
-SUN:0,
-TUL:0,
-ROS:0,
-DAI:0,
-CHR:0,
-LAV:0
+
+  SUN: 0,
+
+  TUL: 0,
+
+  ROS: 0,
+
+  DAI: 0,
+
+  CHR: 0,
+
+  LAV: 0
+
 };
 
-let history = [];
 
+let answerHistory =
+  [];
+
+
+let isTransitioning =
+  false;
+
+
+
+
+/* ==========================================
+   ELEMENTS
+========================================== */
 
 const screens =
-document.querySelectorAll(".screen");
-
-
-function showScreen(id){
-
-screens.forEach(screen =>
-screen.classList.remove("active")
-);
-
-document
-.getElementById(id)
-.classList.add("active");
-
-window.scrollTo(0,0);
-
-}
-
-
-document
-.getElementById("startBtn")
-.addEventListener("click", startQuiz);
-
-
-function startQuiz(){
-
-currentQuestion = 0;
-
-scores = {
-SUN:0,
-TUL:0,
-ROS:0,
-DAI:0,
-CHR:0,
-LAV:0
-};
-
-history = [];
-
-showScreen("quiz");
-
-renderQuestion();
-
-}
-
-
-function renderQuestion(){
-
-const data =
-questions[currentQuestion];
-
-document
-.getElementById("questionText")
-.textContent =
-data.question;
-
-
-document
-.getElementById("progressText")
-.textContent =
-String(currentQuestion + 1)
-.padStart(2,"0")
-+
-" / "
-+
-String(questions.length)
-.padStart(2,"0");
-
-
-document
-.getElementById("progressBar")
-.style.width =
-((currentQuestion + 1) /
-questions.length * 100)
-+
-"%";
-
-
-const answers =
-document.getElementById("answers");
-
-answers.innerHTML = "";
-
-
-data.answers.forEach(
-(answer,index)=>{
-
-const button =
-document.createElement("button");
-
-button.className =
-"answer-btn";
-
-button.innerHTML =
-`
-<span class="answer-letter">
-${String.fromCharCode(65+index)}
-</span>
-${answer[0]}
-`;
-
-button.onclick =
-()=> selectAnswer(answer[1]);
-
-answers.appendChild(button);
-
-});
-
-}
-
-
-function selectAnswer(points){
-
-history.push(points);
-
-Object.keys(points)
-.forEach(key => {
-
-scores[key] += points[key];
-
-});
-
-
-if(
-currentQuestion <
-questions.length - 1
-){
-
-currentQuestion++;
-
-setTimeout(
-renderQuestion,
-180
-);
-
-}
-
-else{
-
-showScreen("analyzing");
-
-setTimeout(
-calculateResult,
-2200
-);
-
-}
-
-}
-
-
-document
-.getElementById("backBtn")
-.addEventListener(
-"click",
-goBack
-);
-
-
-function goBack(){
-
-if(currentQuestion === 0){
-return;
-}
-
-const previous =
-history.pop();
-
-Object.keys(previous)
-.forEach(key => {
-
-scores[key] -= previous[key];
-
-});
-
-currentQuestion--;
-
-renderQuestion();
-
-}
-
-
-function calculateResult(){
-
-let highest =
-Math.max(...Object.values(scores));
-
-let winners =
-Object.keys(scores)
-.filter(
-key =>
-scores[key] === highest
-);
-
-
-/*
-Tie breaker:
-If scores are identical,
-choose one of the tied results.
-Later we can replace this
-with secondary scoring.
-*/
-
-const winner =
-winners[
-Math.floor(
-Math.random() *
-winners.length
-)
-];
-
-showResult(winner);
-
-}
-
-
-function showResult(key){
-
-  const p =
-  personalities[key];
-
-
-  document.documentElement
-  .style.setProperty(
-    "--accent",
-    p.color
+  document.querySelectorAll(
+    ".screen"
   );
 
 
-  document
-  .getElementById("resultFlower")
-  .textContent =
-  p.flower;
+const startBtn =
+  document.getElementById(
+    "startBtn"
+  );
 
 
-  document
-  .getElementById("resultName")
-  .textContent =
-  p.name;
+const backBtn =
+  document.getElementById(
+    "backBtn"
+  );
 
 
-  document
-  .getElementById("resultTitle")
-  .textContent =
-  p.title;
+const progressText =
+  document.getElementById(
+    "progressText"
+  );
 
 
-  document
-  .getElementById("resultTraits")
-  .textContent =
-  p.traits;
+const progressBar =
+  document.getElementById(
+    "progressBar"
+  );
 
 
-  document
-  .getElementById("resultDescription")
-  .textContent =
-  p.description;
+const questionText =
+  document.getElementById(
+    "questionText"
+  );
 
 
-  document
-  .getElementById("resultVibe")
-  .textContent =
-  p.vibe;
+const answersContainer =
+  document.getElementById(
+    "answers"
+  );
 
 
-  document
-  .getElementById("resultStrength")
-  .textContent =
-  p.strength;
 
 
-  showScreen("result");
+/* ==========================================
+   SHOW SCREEN
+========================================== */
+
+function showScreen(id) {
+
+
+  screens.forEach(
+    screen => {
+
+      screen
+        .classList
+        .remove(
+          "active"
+        );
+
+    }
+  );
+
+
+  const target =
+    document.getElementById(
+      id
+    );
+
+
+  if (!target) {
+    return;
+  }
+
+
+  target
+    .classList
+    .add(
+      "active"
+    );
+
+
+  window.scrollTo({
+
+    top: 0,
+
+    behavior:
+      "instant"
+
+  });
 
 }
 
 
-document.documentElement
-.style.setProperty(
-"--accent",
-"#FFC928"
-);
-
-showScreen("landing");
-
-});
 
 
-  document.documentElement
-  .style.setProperty(
-    "--accent",
-    "#FFC928"
+/* ==========================================
+   START QUIZ
+========================================== */
+
+startBtn
+  .addEventListener(
+    "click",
+    startQuiz
   );
 
-  showScreen("landing");
 
-});
+function startQuiz() {
 
-function showResult(key){
 
-  const p =
-  personalities[key];
+  currentQuestion =
+    0;
 
-  document.documentElement
-  .style.setProperty(
-    "--accent",
-    p.color
+
+  scores = {
+
+    SUN: 0,
+
+    TUL: 0,
+
+    ROS: 0,
+
+    DAI: 0,
+
+    CHR: 0,
+
+    LAV: 0
+
+  };
+
+
+  answerHistory =
+    [];
+
+
+  isTransitioning =
+    false;
+
+
+  document
+    .documentElement
+    .style
+    .setProperty(
+      "--accent",
+      "#FFC928"
+    );
+
+
+  showScreen(
+    "quiz"
   );
 
-  document
-  .getElementById("resultFlower")
-  .textContent =
-  p.flower;
+
+  renderQuestion();
+
+}
+
+
+
+
+/* ==========================================
+   RENDER QUESTION
+========================================== */
+
+function renderQuestion() {
+
+
+  isTransitioning =
+    false;
+
+
+  const data =
+    questions[
+      currentQuestion
+    ];
+
+
+  questionText
+    .textContent =
+    data.question;
+
+
+
+  progressText
+    .textContent =
+
+    String(
+      currentQuestion + 1
+    )
+    .padStart(
+      2,
+      "0"
+    )
+
+    +
+
+    " / "
+
+    +
+
+    String(
+      questions.length
+    )
+    .padStart(
+      2,
+      "0"
+    );
+
+
+
+  const percentage =
+
+    (
+      (
+        currentQuestion + 1
+      )
+
+      /
+
+      questions.length
+
+    )
+
+    *
+
+    100;
+
+
+
+  progressBar
+    .style
+    .width =
+
+    `${percentage}%`;
+
+
+
+  if (
+    currentQuestion === 0
+  ) {
+
+    backBtn
+      .classList
+      .add(
+        "hidden"
+      );
+
+  }
+
+  else {
+
+    backBtn
+      .classList
+      .remove(
+        "hidden"
+      );
+
+  }
+
+
+
+  answersContainer
+    .innerHTML =
+    "";
+
+
+
+  data
+    .answers
+    .forEach(
+      (
+        answer,
+        index
+      ) => {
+
+
+        const button =
+          document
+          .createElement(
+            "button"
+          );
+
+
+        button
+          .type =
+          "button";
+
+
+        button
+          .className =
+          "answer-btn";
+
+
+        const letter =
+          String
+          .fromCharCode(
+            65 + index
+          );
+
+
+        button
+          .innerHTML = `
+
+          <span class="answer-letter">
+            ${letter}
+          </span>
+
+          <span>
+            ${answer[0]}
+          </span>
+
+        `;
+
+
+        button
+          .addEventListener(
+            "click",
+            () => {
+
+              selectAnswer(
+                answer[1],
+                button
+              );
+
+            }
+          );
+
+
+        answersContainer
+          .appendChild(
+            button
+          );
+
+      }
+    );
+
+}
+
+
+
+
+/* ==========================================
+   SELECT ANSWER
+========================================== */
+
+function selectAnswer(
+  points,
+  selectedButton
+) {
+
+
+  if (
+    isTransitioning
+  ) {
+
+    return;
+
+  }
+
+
+  isTransitioning =
+    true;
+
+
+
+  const buttons =
+    document
+    .querySelectorAll(
+      ".answer-btn"
+    );
+
+
+  buttons
+    .forEach(
+      button => {
+
+        button
+          .classList
+          .add(
+            "disabled"
+          );
+
+      }
+    );
+
+
+
+  selectedButton
+    .classList
+    .add(
+      "selected"
+    );
+
+
+
+  answerHistory
+    .push(
+      {
+        ...points
+      }
+    );
+
+
+
+  Object
+    .keys(
+      points
+    )
+    .forEach(
+      key => {
+
+        scores[key]
+          += points[key];
+
+      }
+    );
+
+
+
+  setTimeout(
+    () => {
+
+
+      if (
+
+        currentQuestion
+        <
+        questions.length - 1
+
+      ) {
+
+
+        currentQuestion++;
+
+
+        renderQuestion();
+
+      }
+
+
+      else {
+
+
+        showScreen(
+          "analyzing"
+        );
+
+
+        setTimeout(
+          calculateResult,
+          2100
+        );
+
+      }
+
+
+    },
+    280
+  );
+
+}
+
+
+
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+backBtn
+  .addEventListener(
+    "click",
+    goBack
+  );
+
+
+function goBack() {
+
+
+  if (
+    currentQuestion === 0
+  ) {
+
+    return;
+
+  }
+
+
+  if (
+    isTransitioning
+  ) {
+
+    return;
+
+  }
+
+
+
+  const previousPoints =
+    answerHistory
+    .pop();
+
+
+
+  if (
+    previousPoints
+  ) {
+
+
+    Object
+      .keys(
+        previousPoints
+      )
+      .forEach(
+        key => {
+
+          scores[key]
+            -=
+            previousPoints[key];
+
+        }
+      );
+
+  }
+
+
+
+  currentQuestion--;
+
+
+  renderQuestion();
+
+}
+
+
+
+
+/* ==========================================
+   RESULT CALCULATION
+========================================== */
+
+function calculateResult() {
+
+
+  const entries =
+    Object
+      .entries(
+        scores
+      );
+
+
+  entries
+    .sort(
+      (
+        a,
+        b
+      ) =>
+        b[1]
+        -
+        a[1]
+    );
+
+
+
+  const highestScore =
+    entries[0][1];
+
+
+  const possibleWinners =
+    entries
+    .filter(
+      entry =>
+        entry[1]
+        ===
+        highestScore
+    )
+    .map(
+      entry =>
+        entry[0]
+    );
+
+
+
+  let winner =
+    possibleWinners[0];
+
+
+
+  /*
+    TIE BREAKER
+
+    Jika terdapat skor sama,
+    sistem melihat kecenderungan
+    jawaban terakhir yang memberikan
+    poin terbesar ke personality
+    yang sedang seri.
+
+    Ini membuat hasil lebih konsisten
+    dibanding memilih secara random.
+  */
+
+
+  if (
+    possibleWinners.length > 1
+  ) {
+
+
+    winner =
+      resolveTie(
+        possibleWinners
+      );
+
+  }
+
+
+
+  showResult(
+    winner
+  );
+
+}
+
+
+
+
+/* ==========================================
+   TIE BREAKER
+========================================== */
+
+function resolveTie(
+  candidates
+) {
+
+
+  const tieScores =
+    {};
+
+
+  candidates
+    .forEach(
+      candidate => {
+
+        tieScores[
+          candidate
+        ] =
+        0;
+
+      }
+    );
+
+
+
+  answerHistory
+    .forEach(
+      answer => {
+
+
+        candidates
+          .forEach(
+            candidate => {
+
+
+              if (
+                answer[
+                  candidate
+                ]
+              ) {
+
+
+                tieScores[
+                  candidate
+                ]
+                +=
+                answer[
+                  candidate
+                ];
+
+              }
+
+
+            }
+          );
+
+
+      }
+    );
+
+
+
+  const sorted =
+    Object
+      .entries(
+        tieScores
+      )
+      .sort(
+        (
+          a,
+          b
+        ) =>
+          b[1]
+          -
+          a[1]
+      );
+
+
+
+  return sorted[0][0];
+
+}
+
+
+
+
+/* ==========================================
+   SHOW RESULT
+========================================== */
+
+function showResult(
+  key
+) {
+
+
+  const personality =
+    personalities[
+      key
+    ];
+
+
+
+  if (
+    !personality
+  ) {
+
+    return;
+
+  }
+
+
 
   document
-  .getElementById("resultName")
-  .textContent =
-  p.name;
+    .documentElement
+    .style
+    .setProperty(
+      "--accent",
+      personality.color
+    );
+
+
 
   document
-  .getElementById("resultTitle")
-  .textContent =
-  p.title;
+    .getElementById(
+      "resultFlower"
+    )
+    .textContent =
+    personality.flower;
+
+
 
   document
-  .getElementById("resultTraits")
-  .textContent =
-  p.traits;
+    .getElementById(
+      "resultName"
+    )
+    .textContent =
+    personality.name;
+
+
 
   document
-  .getElementById("resultDescription")
-  .textContent =
-  p.description;
+    .getElementById(
+      "resultTitle"
+    )
+    .textContent =
+    personality.title;
+
+
 
   document
-  .getElementById("resultVibe")
-  .textContent =
-  p.vibe;
+    .getElementById(
+      "resultTraits"
+    )
+    .textContent =
+    personality.traits;
+
+
 
   document
-  .getElementById("resultStrength")
-  .textContent =
-  p.strength;
+    .getElementById(
+      "resultDescription"
+    )
+    .textContent =
+    personality.description;
 
-  showScreen("result");
+
+
+  document
+    .getElementById(
+      "resultVibe"
+    )
+    .textContent =
+    personality.vibe;
+
+
+
+  document
+    .getElementById(
+      "resultStrength"
+    )
+    .textContent =
+    personality.strength;
+
+
+
+  showScreen(
+    "result"
+  );
 
 }
